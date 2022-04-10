@@ -28,7 +28,7 @@ class Student{
         usn = sc.next();
 
         for (int i = 0; i < 3; i++) {
-            System.out.println("Enter marks in subject:" + i+1);
+            System.out.println("Enter marks in subject:" + (i+1));
             marks[i] = sc.nextInt();
         }
     }
