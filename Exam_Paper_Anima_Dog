@@ -1,0 +1,32 @@
+package com.upgrad;
+
+import java.util.Scanner;
+
+class Animal{
+    String color="Black";
+    public void eat(){
+        System.out.println("This is Animal Class eat method");
+    }
+}
+class Dog extends Animal{
+    String color="Brown";
+    public void eat(){
+        System.out.println("Colour of Dog is "+color);
+        System.out.println("This is Dog Class eat method");
+        System.out.println("Color and Eat method of Animal class");
+        System.out.println("Colour of Animal is "+super.color);
+        super.eat();
+    }
+
+}
+
+public class Main {
+    public static void main(String args[]) {
+        Dog d = new Dog();
+        d.eat();
+    }
+}
+
+
+
+
