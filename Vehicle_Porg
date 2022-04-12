@@ -1,0 +1,56 @@
+package com.upgrad;
+
+import java.util.Scanner;
+
+abstract class Vehicle{
+    abstract void numOfTyres();
+    void steering(){
+        System.out.println("It represents steering of the vehicle");
+    }
+
+}
+class Lorry extends Vehicle{
+    void numOfTyres(){
+        System.out.println("Lorry has 8 tyres");
+    }
+    void steering(){
+        System.out.println("It represents steering of lorry");
+    }
+}
+class Car extends Vehicle{
+    void numOfTyres(){
+        System.out.println("Car has 4 tyres");
+    }
+    void steering(){
+        System.out.println("It represents steering of Car");
+    }
+}
+class Cycle extends Vehicle{
+    void numOfTyres(){
+        System.out.println("Cycle has 2 tyres");
+    }
+    void steering(){
+        System.out.println("Cycle has no steering");
+    }
+}
+public class Main {
+    public static void main(String args[]) {
+        Lorry lorry = new Lorry();
+        Car car = new Car();
+        Cycle cycle = new Cycle();
+        Vehicle vehicle;
+        vehicle=lorry;
+        vehicle.numOfTyres();
+        vehicle.steering();
+        vehicle=car;
+        vehicle.numOfTyres();
+        vehicle.steering();
+        vehicle=cycle;
+        vehicle.numOfTyres();
+        vehicle.steering();
+    }
+}
+
+
+
+
