@@ -1,0 +1,39 @@
+package com.upgrad;
+
+
+import java.util.Scanner;
+
+class Doctor{
+    int salary;
+    Doctor(int s){
+        salary=s;
+    }
+    void print_Details(){
+        System.out.println("Salary of doctor is "+salary);
+    }
+}
+class Surgeon extends Doctor{
+    Surgeon(int s){
+        super(s);
+    }
+    void print_Details(){
+//        System.out.println("salary of surgeon is "+super.salary*4);
+        System.out.println("Salary of surgeon is "+ salary);
+    }
+}
+
+public class Main {
+    public static void main(String args[]) {
+        Doctor doctor = new Doctor(10000);
+        Surgeon surgeon = new Surgeon(20000);
+        Doctor ob;
+        ob=doctor;
+        ob.print_Details();
+        ob=surgeon;
+        ob.print_Details();
+    }
+}
+
+
+
+
