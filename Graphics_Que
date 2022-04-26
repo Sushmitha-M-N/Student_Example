@@ -1,0 +1,35 @@
+package com.upgrad;
+
+import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+public class Main extends Frame {
+
+    public Main(){
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                System.exit(0);
+            }
+        });
+    }
+
+    public void paint(Graphics graphics){
+        graphics.drawString("Hello",40,40);
+        graphics.setColor(Color.red);
+        graphics.fillRect(150,40,80,50);
+        graphics.fillOval(150,100,50,50);
+        graphics.setColor(Color.black);
+        graphics.drawOval(40,100,50,50);
+        //graphics.fillArc(55,125,20,50,170,180);
+        graphics.drawArc(40,160,20,5,70,110);
+    }
+    public static void main(String[] args) {
+	// write your code here
+        Main main = new Main();
+        main.setSize(new Dimension(700,500));
+        main.setTitle("Graphics Demo");
+        main.setVisible(true);
+    }
+}
