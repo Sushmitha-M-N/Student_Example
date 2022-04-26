@@ -1,0 +1,46 @@
+package com.upgrad;
+
+import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+public class Main extends Frame {
+
+    public Main(){
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                System.exit(0);
+            }
+        });
+    }
+
+    public void paint(Graphics graphics){
+        //Drawing Line
+        graphics.drawLine(20,150,100,90);
+        graphics.drawLine(40,350,250,80);
+
+        //Drawing Rectangle
+        graphics.drawRect(20,150,60,50);
+        graphics.drawRoundRect(200,150,60,50,15,15);
+        graphics.fillRect(110,150,60,50);
+        
+        //Ellipse
+        graphics.drawOval(20,150,20,50);
+        graphics.fillOval(40,150,20,50);
+        
+        //Arc
+        graphics.drawArc(20,350,70,70,0,180);
+        //graphics.drawArc(100,350,20,70,0,180);
+        graphics.fillArc(100,350,20,70,0,180);
+        graphics.drawArc(130,350,20,70,0,75);
+        graphics.fillArc(160,350,20,70,180,90);
+    }
+    public static void main(String[] args) {
+	// write your code here
+        Main main = new Main();
+        main.setSize(new Dimension(370,700));
+        main.setTitle("Graphics Demo");
+        main.setVisible(true);
+    }
+}
